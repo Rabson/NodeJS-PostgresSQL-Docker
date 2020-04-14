@@ -15,3 +15,5 @@ blocks:
             - 'docker pull "${DOCKER_USERNAME}/dockerizing-nodejs-addressbook:latest" || true'
             - 'docker build --cache-from "${DOCKER_USERNAME}/dockerizing-nodejs-addressbook:latest" -t "${DOCKER_USERNAME}/dockerizing-nodejs-addressbook:latest" .'
             - 'docker push "${DOCKER_USERNAME}/dockerizing-nodejs-addressbook:latest"'
+      secrets:
+        - name: docker hub
